@@ -4,37 +4,38 @@
     <title>Drew's Web</title>
   </head>
 <style>
-ul {
+ul.nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  position: fixed;
   overflow: hidden;
-  background-color: #333;
-  text-align: center;
+  width: 100%;
+  background-color: lightgrey;
+  top: 0;
 }
-
-li {
+  
+li.nav {
   float: left;
+  background-color: lightgrey;
+  display: inline;
 }
-
+  
 li a {
   display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+  padding: 10px 20px;
   text-decoration: none;
+  color: white;
 }
-
-li a:hover {
-  background-color: #111;
-}
-</style>
-  <body style="background-color:black;">
-<ul>
-  <li><a class="active" href="">Home</a></li>
-  <li><a href="">Resume</a></li>
-  <li><a href="">Porfolio</a></li>
-  <li><a href="">Contact</a></li>
-</ul>
+<style>
+  <body>
+    <ul class="nav">
+      <li class="nav"><a href="#home">Home</a></li>
+      <li class="nav"><a href="#h5">test 5</a></li>
+      <li class="nav"><a href="#circle">circle list</a></li>
+      <li class="nav"><a href="#home">Home</a></li>
+      <li class="nav"><a href="#home">Home</a></li>
+      <li class="nav"><a href="#home">Home</a></li>
+    </ul>
   </body>
 </html>
