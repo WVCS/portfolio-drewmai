@@ -3,10 +3,41 @@
   <head>
     <title>Drew's Web</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/Porfolio Logo.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script>
+function resizeGridItem(item){
+  grid = document.getElementsByClassName("grid")[0];
+  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+  rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+}
+
+function resizeAllGridItems(){
+  allItems = document.getElementsByClassName("item");
+  for(x=0;x<allItems.length;x++){
+    resizeGridItem(allItems[x]);
+  }
+}
+
+function resizeInstance(instance){
+	item = instance.elements[0];
+  resizeGridItem(item);
+}
+
+window.onload = resizeAllGridItems();
+window.addEventListener("resize", resizeAllGridItems);
+
+allItems = document.getElementsByClassName("item");
+for(x=0;x<allItems.length;x++){
+  imagesLoaded( allItems[x], resizeInstance);
+}
+</script>
   </head>
 <style>
 ul.nav {
@@ -16,13 +47,13 @@ ul.nav {
 	position: fixed;
 	overflow: hidden;
 	width: 100%;
-	background-color: lightgrey;
+	background-color: #e21818;
 	top: 0;
 }
 
 li.nav {
 	float: left;
-	background-color: lightgrey;
+	background-color: #e21818;
 	display: inline;
 }
 
@@ -30,28 +61,77 @@ li a {
 	display: block;
 	padding: 20px 20px;
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-size: 120%;
 }
 
 li a:hover {
 	background-color: maroon;
-	color: white;
+	color: black;
 }
   
-.title{
+.titleimage{
 	text-align: center;
-	padding: 190px 0px;
+	padding: 190px;
 }
 
 .body{
 	color: white;
 	font-size: 120%;
 }
+	
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-auto-rows: 20px;
+}
+
+.item {
+  background-color: #ffffff;
+}
+
+.photothumb{
+  width: 100%;
+}
+
+.title {
+  padding: 20px;
+ }
+
+.title h3{
+  font-size: 1.2em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.project .title{
+  background-color: #607D8B;
+}
+
+.photo .title{
+  background-color: #f44336;
+}
+
+.desc{
+  padding: 10px 10px 5px 10px;
+  font-size: 120%;
+}
+
+.desc img{
+  width: 50%;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+.desc p{
+  margin-bottom: 10px;
+}
 </style>
   <body style="background-color: black;">
   <!-- NavBar -->
   <ul class="nav">
+    <li class="nav"><img src="images/Portfolio Logo.png" style=width:60px; height:60px;></li>
 	<li class="nav"><a href="#Top"><i>Top</i></a></li>
 	<li class="nav"><a href="#About"><b>About</b></a></li>
 	<li class="nav"><a href="#Resume"><b>Resume</b></a></li>
@@ -60,7 +140,7 @@ li a:hover {
   </ul>
   <!-- Title -->
   <div class="animation"></div>
-  <p class="title" id="Top"><img src="file://dohome5/home5$/Student5/1840740/Web%20Design%201-2/Porfolio/images/titlephoto.jpg" alt="Title"></p>
+  <p class="titleimage" id="Top"><img src="images/Portfolio Logo.png" style=width:700px; height:700px; alt="Title"></p>
   
   <h1 id="About"></h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   
@@ -103,7 +183,7 @@ li a:hover {
 	companies.</p>
   </div>
   
-  <h1 id="Portfolio"></h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <h1 id="Portfolio"></h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   
   <!-- Portfolio -->
   <div class="container">
@@ -111,9 +191,74 @@ li a:hover {
 	<h1>Portfolio</h1>
 	<p>All my work.</p>
 	</div>
-	<p class="body">
-		
-	</p>
+	<div class="grid">
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>1: The Earth IS Flat</h3>
+		  </div>
+		  <img class="photothumb" src="images/TheEarthISFlat.PNG">
+		  <div class="desc">
+		  <p>This is my very first website that I have made in Web Design 1-2. In this website there is a series of images, email sign-up, and divs.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>2: SitDown</h3>
+		  </div>
+		  <img class="photothumb" src="images/SitDown.PNG">
+		  <div class="desc">
+		  <p>This is my website that I have created in Web Design. In this website we were assigned a task to make a website for an imaginary restaurant. I feel like this website is one of my best ones due to the craftsmanship and effort.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>3: Lit Land</h3>
+		  </div>
+		  <img class="photothumb" src="images/Lit Land.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we had to create a website for a theme park. Through this work I have implimented gifs and boxes.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>4: FC Barcelona</h3>
+		  </div>
+		  <img class="photothumb" src="images/FC Barcelona.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment I had to work with my partner(Andy Lam) to make a website for an imaginary team or existing. In this project I learned how to make a slideshow of pictures and a dropdown nav bar.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item project">
+	    <div class="content">
+		  <div class="title">
+		    <h3>5: Burning Man</h3>
+		  </div>
+		  <img class="photothumb" src="images/Burning Man.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we had to make a website for an event. The event I chose was Burning Man which is said to be a fun and trilling experience. In my website I made use of jumbotrons and buttons to link to ticket sales.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item project">
+	    <div class="content">
+		  <div class="title">
+		    <h3>6: Lorem Clothing</h3>
+		  </div>
+		  <img class="photothumb" src="images/Lorem Clothing.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we had to make a clothing website. Within this website I was able to learn and incorporate the use of animations, social media links, and checkout carts. But there were many hardships concerning the div containers.</p>
+		  </div>
+	    </div>
+	  </div>
+    </div>
   <!-- Contact -->
   </body>
 </html>
