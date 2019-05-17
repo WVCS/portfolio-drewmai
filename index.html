@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<script>
+<script>
 function resizeGridItem(item){
   grid = document.getElementsByClassName("grid")[0];
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
@@ -17,22 +17,18 @@ function resizeGridItem(item){
   rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
     item.style.gridRowEnd = "span "+rowSpan;
 }
-
 function resizeAllGridItems(){
   allItems = document.getElementsByClassName("item");
   for(x=0;x<allItems.length;x++){
     resizeGridItem(allItems[x]);
   }
 }
-
 function resizeInstance(instance){
 	item = instance.elements[0];
   resizeGridItem(item);
 }
-
 window.onload = resizeAllGridItems();
 window.addEventListener("resize", resizeAllGridItems);
-
 allItems = document.getElementsByClassName("item");
 for(x=0;x<allItems.length;x++){
   imagesLoaded( allItems[x], resizeInstance);
@@ -50,13 +46,11 @@ ul.nav {
 	background-color: #e21818;
 	top: 0;
 }
-
 li.nav {
 	float: left;
 	background-color: #e21818;
 	display: inline;
 }
-
 li a {
 	display: block;
 	padding: 20px 20px;
@@ -64,7 +58,6 @@ li a {
 	color: white;
 	font-size: 120%;
 }
-
 li a:hover {
 	background-color: maroon;
 	color: black;
@@ -74,7 +67,6 @@ li a:hover {
 	text-align: center;
 	padding: 190px;
 }
-
 .body{
 	color: white;
 	font-size: 120%;
@@ -86,44 +78,35 @@ li a:hover {
   grid-template-columns: repeat(auto-fill, minmax(250px,auto));
   grid-auto-rows: 20px;
 }
-
 .item {
   background-color: #ffffff;
 }
-
 .photothumb{
   width: 100%;
 }
-
 .title {
   padding: 20px;
  }
-
 .title h3{
   font-size: 1.2em;
   color: #ffffff;
   text-transform: uppercase;
 }
-
 .project .title{
   background-color: #607D8B;
 }
-
 .photo .title{
   background-color: #f44336;
 }
-
 .desc{
   padding: 10px 10px 5px 10px;
   font-size: 120%;
 }
-
 .desc img{
   width: 50%;
   margin: 0 10px 10px 0;
   float: left;
 }
-
 .desc p{
   margin-bottom: 10px;
 }
@@ -136,7 +119,7 @@ li a:hover {
 	<li class="nav"><a href="#About"><b>About</b></a></li>
 	<li class="nav"><a href="#Resume"><b>Resume</b></a></li>
 	<li class="nav"><a href="#Portfolio"><b>Portfolio</b></a></li>
-	<li class="nav"><a href=""><b>Contact</b></a></li>
+	<li class="nav"><a href="websites/contact.html"><b>Contact</b></a></li>
   </ul>
   <!-- Title -->
   <div class="animation"></div>
@@ -221,7 +204,7 @@ li a:hover {
 		  </div>
 		  <img class="photothumb" src="images/Lit Land.PNG">
 		  <div class="desc">
-		  <p>This is my website I have created in Web Design. In this assignment we had to create a website for a theme park. Through this work I have implimented gifs and boxes.</p>
+		  <p>This is my website I have created in Web Design. In this assignment we had to create a website for a theme park. Within this work I have implimented gifs and boxes.</p>
 		  </div>
 	    </div>
 	  </div>
@@ -250,11 +233,77 @@ li a:hover {
 	  <div class="item project">
 	    <div class="content">
 		  <div class="title">
-		    <h3>6: Lorem Clothing</h3>
+		    <h3>7: Lorem Clothing</h3>
 		  </div>
 		  <img class="photothumb" src="images/Lorem Clothing.PNG">
 		  <div class="desc">
 		  <p>This is my website I have created in Web Design. In this assignment we had to make a clothing website. Within this website I was able to learn and incorporate the use of animations, social media links, and checkout carts. But there were many hardships concerning the div containers.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item project">
+	    <div class="content">
+		  <div class="title">
+		    <h3>6: Animations</h3>
+		  </div>
+		  <img class="photothumb" src="images/Animation.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we had to make a animations consisting of a square moving across the screen. With is assignment I have learned useful skills involving animation and use of divs in other ways.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item project">
+	    <div class="content">
+		  <div class="title">
+		    <h3>8: Moving Divs</h3>
+		  </div>
+		  <img class="photothumb" src="images/Moving Divs.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we were tasked to make moving divs. This assignment was quite similar to the animations project but the only difference was the div positions.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>9: Q3 Crash Course</h3>
+		  </div>
+		  <img class="photothumb" src="images/Crash Course.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. This was actually a review course that Ms. Neuman had set up for the class to review everything we have done in the past.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>11: Photoshop</h3>
+		  </div>
+		  <img class="photothumb" src="images/Logo Practice.PNG">
+		  <div class="desc">
+		  <p>This is my project I have created in Web Design. In this assignment we were supposed to copy and edit a random photo in photoshop. In this experience I have learned how to erase white backgrounds and getting rid of text or spots.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>12: CSS Grids</h3>
+		  </div>
+		  <img class="photothumb" src="images/CSS Grids.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we explored and learned how to do CSS grids. Within this assignment I have learned to make use of CSS and JS.</p>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="item photo">
+	    <div class="content">
+		  <div class="title">
+		    <h3>10: Bootstrap</h3>
+		  </div>
+		  <img class="photothumb" src="images/Bootstrap.PNG">
+		  <div class="desc">
+		  <p>This is my website I have created in Web Design. In this assignment we explored and learned how to do Bootstrap. Within this assignment i learned how to make use of JS to create jumbotrons.</p>
 		  </div>
 	    </div>
 	  </div>
