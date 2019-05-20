@@ -34,16 +34,34 @@ li a:hover {
 	text-align: center;
 	padding: 190px;
 }
+
 .body{
 	color: white;
 	font-size: 120%;
+}
+
+div{
+	width: 100px;
+	height: 30px;
+	background-color: #e21818;
+	animation-name: animation;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	position: relative;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes animation {
+  	0% {left: 1769px; top:0px;}
+	100% {left: 0px; top:0px;}
 }
 </style>
   <body style="background-color: black;">
   <!-- NavBar -->
   <ul class="nav">
     <li class="nav"><img src="../images/Portfolio Logo.png" style=width:60px; height:60px;></li>
-	<li class="nav"><a href="../index.html">Back</a></li>
+	<li class="nav"><a href="../Andrew's Portfolio.html">Back</a></li>
   </ul>
 
   <br><br><br><br><br>
@@ -80,6 +98,9 @@ method="post">
 </ul>
 <input type="submit"
 value="submit">
+
+<div>
+</div>
 
 </body>
 </html>
