@@ -20,7 +20,7 @@ li.nav {
 }
 li a {
 	display: block;
-	padding: 20px 20px;
+	padding: 15px 20px;
 	text-decoration: none;
 	color: white;
 	font-size: 120%;
@@ -56,6 +56,147 @@ div{
   	0% {left: 1769px; top:0px;}
 	100% {left: 0px; top:0px;}
 }
+
+@import url(//fonts.googleapis.com/css?family=Raleway:900);
+body {
+      background-image: url("http://www.podenemus.com/images/bkg.jpg");
+    background-size: cover;
+}
+
+#projects {
+  overflow: visible;
+  padding: 0;
+  text-align: center;
+}
+
+#projects li {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 1%;
+  position: relative;
+  width: 18%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
+}
+
+#projects li a {
+  display: block;
+}
+
+#projects li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 400ms; 
+  transition: all 400ms;
+}
+
+#projects li a:hover img {
+  -webkit-transform: scale(1.1);  
+  transform: scale(1.1);  
+}
+
+#projects li h3 {
+  box-sizing: border-box;
+  position: absolute;
+  background: #ffffff;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  opacity: 0.8;
+  font: 18px/1.6em Raleway, sans-serif;
+  text-transform: uppercase;
+  color: #585861;
+  text-align: center;
+  z-index: 1;
+}
+
+#projects li h3:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  margin-left: -7px;
+}
+
+#projects li a .overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(1, 1, 25, 0.35);
+  opacity: 0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  transition-timing-function: ease-out;
+}
+
+#projects li a:hover .overlay {
+  opacity:1;
+}
+
+#projects li a .overlay::before {
+    content: "";
+    background: #fff;
+    height: 3px; 
+    width: 40px; 
+    position: absolute; 
+    top: 45%; 
+    left: 50%; 
+    margin: 0 0 0 -20px; 
+    display: block; 
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+    transition-timing-function: ease-out;
+  }
+  
+#projects li a .overlay::after {
+    content: ""; 
+    background: #fff; 
+    height: 3px; 
+    width: 40px; 
+    position: absolute; 
+    top: 45%; 
+    left: 50%; 
+    margin: 0 0 0 -20px; 
+    display: block; 
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+    transition-timing-function: ease-out;
+    transform: rotate(-90deg); 
+  }
+
+    #projects li:hover a .overlay:before {
+      transform: rotate(90deg); 
+      width: 40px; 
+      margin: 0 0 0 -13px;
+    }
+
+		#projects li:hover a .overlay:after {
+      transform: rotate(-0deg); 
+      width: 40px; 
+      margin: 0 0 0 -13px;
+    }
+
+
+#projects li a:hover img {
+  zoom: 1.5;
+}
 </style>
   <body style="background-color: black;">
   <!-- NavBar -->
@@ -64,7 +205,7 @@ div{
 	<li class="nav"><a href="../Andrew's Portfolio.html">Back</a></li>
   </ul>
 
-  <br><br><br><br><br>
+<br><br><br><br><br>
 
 <h1 style="color:white;">Please Contact Me for Anything</h1>
 <p style="color:white;">Email: andrew123@gmail.com</p>
@@ -101,6 +242,30 @@ value="submit">
 
 <div>
 </div>
+</fieldset>
 
+<ul id="projects">
+  <li>
+    <a href="#">
+      <img src="http://www.nederlandsfotomuseum.nl/wp-content/uploads/2015/02/MCO-VST49_BAF-540x680.jpg" alt="Amazing image yay!" />
+      <h3>Pictures!</h3>
+      <div class="overlay"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <img src="http://www.nederlandsfotomuseum.nl/wp-content/uploads/2015/02/AKL-580812-12_BU-540x680.jpg" alt="Amazing image yay!" />
+      <h3>Pictures!</h3>
+      <div class="overlay"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <img src="http://www.nederlandsfotomuseum.nl/wp-content/uploads/2015/02/HSP-27260_B-540x680.jpg" alt="Amazing image yay!" />
+      <h3>Pictures!</h3>
+      <div class="overlay"></div>
+    </a>
+  </li>
+</ul>
 </body>
 </html>
